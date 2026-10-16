@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Priya Kumari — Graphic & UX/UI Designer</title>
+<meta name="description" content="Portfolio of Priya Kumari, Graphic Designer & UX/UI Designer based in Gurgaon, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080C;--card:#0E1018;--line:#1f2333;--text:#e8eaf2;--muted:#8b92a8;--coral:#FF6B4A;--amber:#FFA45B}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#07080C}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.grad{background:linear-gradient(90deg,var(--coral),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--text);font-family:inherit;transition:.25s}
+.btn.primary{background:linear-gradient(90deg,var(--coral),var(--amber));border:0;color:#fff;box-shadow:0 8px 24px rgba(255,107,74,.25)}
+.btn:hover{transform:translateY(-2px);border-color:var(--coral)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+
+/* NAV */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(7,8,12,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:20px}.logo b{color:var(--coral)}
+.links{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--muted)}
+.links a:hover{color:var(--coral)}
+@media(max-width:720px){.links{display:none}}
+
+/* HERO */
+.hero{padding:80px 0 70px;position:relative}
+.hero::before{content:"";position:absolute;right:-120px;top:-60px;width:560px;height:560px;background:radial-gradient(circle,rgba(255,107,74,.28),transparent 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative}
+.hero h1{font-size:clamp(42px,7vw,74px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:14px 0 18px}
+.hero .role{font-size:19px;font-weight:500}.hero .role b{color:var(--amber)}
+.hero p.about{color:var(--muted);max-width:430px;margin:14px 0 28px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.photo-wrap{position:relative;display:flex;justify-content:center}
+.photo{width:min(380px,80vw);aspect-ratio:1;border-radius:50%;padding:8px;background:linear-gradient(160deg,rgba(255,107,74,.55),rgba(255,164,91,.08),transparent)}
+.photo div{width:100%;height:100%;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#2a1a18,#0E1018);display:flex;align-items:center;justify-content:center;font-size:90px;font-weight:800;color:rgba(255,255,255,.15)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.glass{position:absolute;right:0;bottom:-18px;width:250px;padding:18px;border-radius:20px;background:rgba(30,24,28,.7);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.glass .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#34d399;margin-right:8px;animation:pulse 1.8s infinite}
+.glass small{font-size:12px;font-weight:700;color:#34d399}
+.glass p{font-size:13px;color:#cfd3e2;margin:8px 0 12px}
+.glass a{display:flex;justify-content:space-between;font-size:12px;font-weight:600;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.glass a:hover{color:var(--coral)}
+@keyframes pulse{50%{opacity:.3}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.photo-wrap{margin-top:20px;padding-bottom:30px}}
+
+/* TOOLS MARQUEE */
+.tools{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:rgba(14,16,24,.6)}
+.tools .head{display:flex;justify-content:space-between;margin-bottom:14px;font-size:12px}
+.tools .head span:first-child{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5d6b8f}
+.tools .head span:last-child{color:var(--coral)}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;width:max-content;animation:scroll 28s linear infinite}
+.mq:hover .track{animation-play-state:paused}
+.track span{display:flex;align-items:center;gap:10px;padding-right:56px;font-weight:600;font-size:15px;color:#b9bfd3;white-space:nowrap}
+.track i{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* WORK */
+section.work{padding:90px 0}
+.work h2,.contact h2{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.2;margin-top:8px}
+.work .top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font:600 13px inherit;font-family:inherit;cursor:pointer;transition:.2s}
+.filters button:hover{color:#fff}
+.filters button.on{background:linear-gradient(90deg,var(--coral),var(--amber));color:#fff;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s;display:block}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,107,74,.5);box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.thumb{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#2a1a18,#141722);overflow:hidden;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-weight:700;font-size:14px;text-align:center;padding:10px}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .thumb img{transform:scale(1.06)}
+.tag{position:absolute;top:12px;right:12px;z-index:2;padding:5px 12px;border-radius:999px;background:rgba(7,8,12,.75);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.12);font-size:11px;font-weight:600}
+.meta{display:flex;justify-content:space-between;align-items:center;padding:16px 18px}
+.meta h3{font-size:15px;font-weight:700}.meta p{font-size:12px;color:var(--muted)}
+.arrow{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.2s}
+.card:hover .arrow{background:var(--coral);border-color:var(--coral)}
+
+/* QUOTE */
+.quote{margin:0 0 90px}
+.quote .box{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding:36px 40px;border-radius:24px;background:linear-gradient(120deg,rgba(255,107,74,.16),rgba(255,164,91,.05));border:1px solid var(--line)}
+.quote blockquote{flex:1;min-width:260px;font-size:19px;font-weight:500;color:#e2e5f0}
+.quote blockquote:before{content:"“";display:block;font-size:54px;line-height:.6;color:var(--coral)}
+.who{display:flex;align-items:center;gap:14px}
+.who .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--amber));display:flex;align-items:center;justify-content:center;font-weight:800}
+.who b{display:block;font-size:14px}.who small{color:var(--muted);font-size:12px}
+
+/* CONTACT */
+.contact{border-top:1px solid var(--line);padding:70px 0 40px;background:#050609}
+.contact .row{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{padding:10px 20px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--muted);transition:.2s}
+.socials a:hover{color:var(--coral);border-color:var(--coral)}
+.info{color:var(--muted);font-size:14px;line-height:2}.info a:hover{color:var(--coral)}
+.copy{border-top:1px solid var(--line);padding-top:22px;font-size:12px;color:#5b627a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(prefers-reduced-motion:reduce){.track{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#home" class="logo">PK<b>.</b></a>
+  <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <a href="#contact" class="btn" style="padding:9px 20px;font-size:13px">Let's talk ↗</a>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero" id="home"><div class="wrap">
+  <div>
+    <span class="eyebrow">Creative Designer</span>
+    <h1>Hi, I'm<br><span class="grad">Priya Kumari</span>.</h1>
+    <p class="role">Graphic &amp; UX/UI Designer<br>based in <b>Gurgaon, India</b>.</p>
+    <p class="about" id="about">I help startups and creative brands build thoughtful identities, captivating visuals and digital experiences that connect.</p>
+    <div class="btns">
+      <a href="#work" class="btn primary">View my work →</a>
+      <a href="#contact" class="btn">About me</a>
+    </div>
+  </div>
+  <div class="photo-wrap">
+    <div class="photo"><div>
+      <!-- YOUR PHOTO: put priya.jpg inside the images folder -->
+      <img src="images/priya.jpg" alt="Priya Kumari" onerror="this.remove()">PK
+    </div></div>
+    <div class="glass">
+      <small><span class="dot"></span>Available for work</small>
+      <p>I'm currently accepting new projects &amp; full-time roles.</p>
+      <!-- YOUR RESUME: put resume.pdf in the main folder -->
+      <a href="resume.pdf" target="_blank"><span>Download Resume</span><span>→</span></a>
+    </div>
+  </div>
+</div></header>
+
+<!-- TOOLS -->
+<section class="tools"><div class="wrap head"><span>Mastered Creative Tools &amp; Technologies</span><span>Industry Standard Workflows</span></div>
+<div class="mq"><div class="track" id="track">
+  <span style="--c:#3b82f6"><i></i>Adobe Photoshop</span>
+  <span style="--c:#f5a623"><i></i>Adobe Illustrator</span>
+  <span style="--c:#ec4899"><i></i>CapCut</span>
+  <span style="--c:#06b6d4"><i></i>Canva Pro</span>
+  <span style="--c:#a855f7"><i></i>Figma</span>
+  <span style="--c:#84cc16"><i></i>CorelDRAW</span>
+  <span style="--c:#10b981"><i></i>ChatGPT</span>
+  <span style="--c:#6366f1"><i></i>Lottie Animation</span>
+</div></div></section>
+
+<!-- WORK -->
+<section class="work" id="work"><div class="wrap">
+  <div class="top">
+    <div><span class="eyebrow">Selected Work</span><h2>Designing digital experiences<br>that make an impact.</h2></div>
+    <a class="btn" href="https://www.behance.net/priyakumari24" target="_blank" rel="noopener">View all on Behance →</a>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<!-- TESTIMONIAL -->
+<section class="quote"><div class="wrap"><div class="box">
+  <blockquote>Priya is an exceptional designer who delivers clean, strategic work that elevates our brand every time.</blockquote>
+  <div class="who"><div class="av">JC</div><div><b>James Carter</b><small>Founder, Helix Digital</small></div></div>
+</div></div></section>
+
+<!-- CONTACT -->
+<footer class="contact" id="contact"><div class="wrap">
+  <div class="row">
+    <h2>Let's create something<br><span class="grad">amazing together.</span></h2>
+    <div class="info">
+      <a href="mailto:priyakumari.design24@gmail.com">priyakumari.design24@gmail.com</a><br>
+      Gurgaon, Haryana, India · Remote &amp; On-site
+    </div>
+    <div class="socials">
+      <a href="https://www.behance.net/priyakumari24" target="_blank" rel="noopener">Behance</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:priyakumari.design24@gmail.com" class="btn primary" style="padding:10px 22px">Email me</a>
+    </div>
+  </div>
+  <div class="copy"><span>© 2026 Priya Kumari. All rights reserved.</span><a href="#home">Back to top ↑</a></div>
+</div></footer>
+
+<script>
+/* =====================================================================
+   ★★★  ADD YOUR WORK HERE  ★★★
+   Each project = ONE line between { and },
+   Copy a line, paste it below, then change the text inside the quotes.
+
+   title : name of the project
+   type  : MUST be exactly one of: Social Media, Banner, Logo, Landing Page,
+           Website Design, Mobile App, Case Study, Infographic, Flyer
+   sub   : short description (e.g. "Instagram carousel")
+   img   : picture path, e.g. "images/my-logo.jpg"
+   link  : (optional) Behance link. Leave "" to open the picture big instead.
+   ===================================================================== */
+const WORKS = [
+  { title:"Project name 1", type:"Social Media",   sub:"Instagram carousel", img:"images/social-1.jpg",   link:"" },
+  { title:"Project name 2", type:"Banner",         sub:"Web display banner", img:"images/banner-1.jpg",   link:"" },
+  { title:"Project name 3", type:"Logo",           sub:"Brand identity",     img:"images/logo-1.jpg",     link:"" },
+  { title:"Project name 4", type:"Landing Page",   sub:"SaaS landing page",  img:"images/landing-1.jpg",  link:"" },
+  { title:"Project name 5", type:"Website Design", sub:"Corporate website",  img:"images/website-1.jpg",  link:"" },
+  { title:"Project name 6", type:"Mobile App",     sub:"App UI screens",     img:"images/app-1.jpg",      link:"" },
+  { title:"Project name 7", type:"Case Study",     sub:"UX/UI case study",   img:"images/casestudy-1.jpg",link:"" },
+  { title:"Project name 8", type:"Infographic",    sub:"Data infographic",   img:"images/infographic-1.jpg",link:"" },
+  { title:"Project name 9", type:"Flyer",          sub:"Event flyer",        img:"images/flyer-1.jpg",    link:"" }
+];
+/* ★★★  END OF THE PART YOU EDIT  ★★★ (don't change anything below) */
+
+const TYPES=["Social Media","Banner","Logo","Landing Page","Website Design","Mobile App","Case Study","Infographic","Flyer"];
+const grid=document.getElementById('grid'),filters=document.getElementById('filters');
+function render(f){
+  grid.innerHTML=WORKS.filter(w=>f==='All'||w.type===f).map(w=>`
+    <a class="card" href="${w.link||w.img}" target="_blank" rel="noopener">
+      <div class="thumb"><span class="tag">${w.type}</span>
+        <span>${w.type}</span>
+        <img src="${w.img}" alt="${w.title}" loading="lazy" onerror="this.remove()"></div>
+      <div class="meta"><div><h3>${w.title}</h3><p>${w.sub}</p></div><div class="arrow">↗</div></div>
+    </a>`).join('')||'<p style="color:#8b92a8">No projects in this category yet.</p>';
+}
+['All',...TYPES].forEach((t,i)=>{
+  const b=document.createElement('button');b.textContent=t;if(!i)b.className='on';
+  b.onclick=()=>{document.querySelectorAll('#filters button').forEach(x=>x.className='');b.className='on';render(t)};
+  filters.appendChild(b);
+});
+render('All');
+const track=document.getElementById('track');
+[...track.children].forEach(c=>{const k=c.cloneNode(true);k.setAttribute('aria-hidden','true');track.appendChild(k)});
+</script>
+</body>
+</html>
