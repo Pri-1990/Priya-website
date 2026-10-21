@@ -153,7 +153,56 @@ section.work{padding:90px 0}
   <span style="--c:#6366f1"><i></i>Lottie Animation</span>
 </div></div></section>
 
-<div class="sk"><div class="row"><span>Adobe Photoshop</span><span>95%</span></div><div class="bar"><i data-level="95"></i></div></div>
+  <!-- ABOUT (style + content + animation, all in one) -->
+<style>
+.about-sec{padding:90px 0;border-top:1px solid var(--line)}
+.about-sec .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start}
+.about-sec h2{font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.15;letter-spacing:-.01em;margin:10px 0 24px;text-transform:uppercase}
+.about-sec .txt p{color:#aab0c4;font-size:15px;margin-bottom:16px;max-width:600px}
+.about-sec .txt p b{color:#fff;font-weight:600}
+.skills{border-left:1px solid var(--line);padding-left:50px}
+.skills h4{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 18px}
+.skills h4:not(:first-child){margin-top:34px}
+.sk{margin-bottom:18px}
+.sk .row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px}
+.sk .row span:last-child{color:var(--amber)}
+.bar{height:6px;border-radius:99px;background:#1a1d2b;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--coral),var(--amber));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.skills .btn{margin-top:26px}
+@media(max-width:860px){.about-sec .wrap{grid-template-columns:1fr;gap:40px}.skills{border-left:0;padding-left:0}}
+</style>
+
+<section class="about-sec" id="about"><div class="wrap">
+  <div class="txt">
+    <span class="eyebrow">About Me</span>
+    <h2>Design is solving problems with <span class="grad">empathy and creativity.</span></h2>
+    <p>I am a <b>Graphic and UX/UI Designer with 6+ years of experience</b> in graphic design, branding, marketing collateral, social media management, and user-centered digital experiences. I specialize in creating engaging visual content, designing intuitive interfaces, developing brand identities, and supporting marketing campaigns across digital platforms.</p>
+    <p>I collaborate with clients, developers, and marketing teams to transform ideas into effective design solutions that align with business goals. My skills include visual storytelling, layout design, wireframing, prototyping, and maintaining brand consistency across multiple touchpoints.</p>
+    <p>Proficient in Adobe Photoshop, Illustrator, Figma, CorelDRAW, CapCut, and Canva Pro, I also leverage AI tools like Claude and Google Gemini for creative ideation, content development, research, and improving design workflows. I am passionate about combining creativity, technology, and user-focused thinking to deliver meaningful digital and visual experiences.</p>
+  </div>
+  <div class="skills" id="skills">
+    <h4>Design Tools</h4>
+      <div class="sk"><div class="row"><span>Adobe Photoshop</span><span>95%</span></div><div class="bar"><i data-level="95"></i></div></div>
+      <div class="sk"><div class="row"><span>Adobe Illustrator</span><span>90%</span></div><div class="bar"><i data-level="90"></i></div></div>
+      <div class="sk"><div class="row"><span>Figma</span><span>90%</span></div><div class="bar"><i data-level="90"></i></div></div>
+      <div class="sk"><div class="row"><span>CorelDRAW</span><span>85%</span></div><div class="bar"><i data-level="85"></i></div></div>
+      <div class="sk"><div class="row"><span>CapCut</span><span>80%</span></div><div class="bar"><i data-level="80"></i></div></div>
+    <h4>AI Versatile</h4>
+      <div class="sk"><div class="row"><span>Claude</span><span>85%</span></div><div class="bar"><i data-level="85"></i></div></div>
+      <div class="sk"><div class="row"><span>Google Gemini</span><span>80%</span></div><div class="bar"><i data-level="80"></i></div></div>
+      <div class="sk"><div class="row"><span>Google Flow</span><span>75%</span></div><div class="bar"><i data-level="75"></i></div></div>
+    <a href="resume.pdf" target="_blank" class="btn">Download Resume ↓</a>
+  </div>
+</div></section>
+
+<script>
+/* About skill bars: fill when visible */
+(function(){
+  var bars=document.querySelectorAll('.bar i');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.level+'%';io.unobserve(e.target)}})},{threshold:.3});
+  bars.forEach(function(b){io.observe(b)});
+})();
+</script>
   <!-- WORK -->
 <section class="work" id="work"><div class="wrap">
   <div class="top">
