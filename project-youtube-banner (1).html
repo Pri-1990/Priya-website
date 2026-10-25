@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube Banner — Priya Kumari</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080C;--card:#0E1018;--line:#1f2333;--text:#e8eaf2;--muted:#8b92a8;--coral:#FF6B4A;--amber:#FFA45B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{border-bottom:1px solid var(--line);background:rgba(7,8,12,.85)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-weight:800;font-size:20px}.logo b{color:var(--coral)}
+.back{font-size:14px;font-weight:600;color:var(--muted)}.back:hover{color:var(--coral)}
+header{padding:60px 0 30px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+h1{font-size:clamp(30px,5vw,52px);font-weight:800;line-height:1.15;margin:10px 0 14px}
+.desc{color:var(--muted);max-width:640px}
+.cover{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#2a1a18,#141722);margin-bottom:10px}
+.cover img{width:100%;max-height:560px;object-fit:cover;display:block}
+.gallery{display:grid;gap:26px;padding:20px 0 60px}
+.gallery figure{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-height:160px;display:flex;align-items:center;justify-content:center;color:#4b5266;font-size:14px}
+.gallery img{width:100%;display:block}
+.btns{display:flex;gap:14px;flex-wrap:wrap;padding-bottom:70px}
+.btn{display:inline-flex;padding:13px 26px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid var(--line);transition:.25s}
+.btn.primary{background:linear-gradient(90deg,var(--coral),var(--amber));border:0;color:#fff}
+.btn:hover{transform:translateY(-2px)}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:12px;color:#5b627a;text-align:center}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="index.html" class="logo">PK<b>.</b></a>
+  <a href="index.html#work" class="back">← Back to work</a>
+</div></nav>
+
+<header><div class="wrap">
+  <!-- ★ CHANGE THESE TWO LINES ★ -->
+  <span class="eyebrow">Banner</span>
+  <h1>YouTube Banner</h1>
+  <p class="desc">Write 2 or 3 lines about this project here: what the brief was, what you designed, and the tools you used.</p>
+</div></header>
+
+<main class="wrap">
+  <!-- ★ YOUR 5 IMAGES: change only the file names inside the quotes ★ -->
+  <div class="cover" id="cover"></div>
+  <div class="gallery" id="gallery"></div>
+  <div class="btns">
+    <a class="btn primary" href="index.html#work">← More projects</a>
+    <a class="btn" href="mailto:priyakumari.design24@gmail.com">Hire me</a>
+  </div>
+</main>
+
+<footer>© 2026 Priya Kumari. All rights reserved.</footer>
+
+<script>
+/* ★★★ EDIT HERE: the 5 pictures, in the order you want them shown ★★★ */
+const IMAGES = [
+  "images/youtube-1.jpg",
+  "images/youtube-2.jpg",
+  "images/youtube-3.jpg",
+  "images/youtube-4.jpg",
+  "images/youtube-5.jpg"
+];
+/* ★★★ COVER IMAGE: the big picture shown at the top of this page ★★★ */
+const COVER = "images/youtube-cover.jpg";
+/* ★★★ END ★★★ (don't change anything below) */
+
+const cv = document.getElementById('cover');
+if (COVER) { cv.innerHTML = `<img src="${COVER}" alt="Cover" onerror="document.getElementById('cover').remove()">`; }
+else { cv.remove(); }
+
+document.getElementById('gallery').innerHTML = IMAGES.map((src,i) =>
+  `<figure><img src="${src}" alt="Image ${i+1}" loading="lazy" onerror="this.replaceWith('Image ${i+1} not found: ${src}')"></figure>`
+).join('');
+</script>
+</body>
+</html>
